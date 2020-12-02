@@ -29,7 +29,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 16,
+   "execution_count": 19,
    "metadata": {},
    "outputs": [
     {
@@ -66,11 +66,58 @@
     "import sqlite3\n",
     "from pprint import pprint\n",
     "\n",
-    "db = sqlite3.connect('BDD/moviesdb.db')\n",
+    "db = sqlite3.connect('movies/BDD/moviesdb.db')\n",
     "\n",
     "cursor = db.cursor()\n",
     "\n",
     "a = cursor.execute(\"SELECT tag, count(tag) as nombre FROM tags GROUP by tag ORDER by nombre DESC LIMIT 10\")\n",
+    "\n",
+    "result1 = a.fetchall()\n",
+    "\n",
+    "\n",
+    "db.commit()\n",
+    "cursor.close()\n",
+    "db.close()\n",
+    "\n",
+    "print(\"\\n ce tag est apparue :\\n\")\n",
+    "for element in result1:\n",
+    "    print(element[0],\" = \",element[1],\"fois\")\n",
+    "    print(\"__\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "OperationalError",
+     "evalue": "ambiguous column name: movieId",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mOperationalError\u001b[0m                          Traceback (most recent call last)",
+      "\u001b[1;32m<ipython-input-20-dd9dfa1fdba6>\u001b[0m in \u001b[0;36m<module>\u001b[1;34m\u001b[0m\n\u001b[0;32m      6\u001b[0m \u001b[0mcursor\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mdb\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mcursor\u001b[0m\u001b[1;33m(\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m      7\u001b[0m \u001b[1;33m\u001b[0m\u001b[0m\n\u001b[1;32m----> 8\u001b[1;33m \u001b[0ma\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mcursor\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mexecute\u001b[0m\u001b[1;33m(\u001b[0m\u001b[1;34m\"SELECT * FROM movies LEFT JOIN links ON movieId = links.movieId\"\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m\u001b[0;32m      9\u001b[0m \u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m     10\u001b[0m \u001b[0mresult1\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0ma\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mfetchall\u001b[0m\u001b[1;33m(\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n",
+      "\u001b[1;31mOperationalError\u001b[0m: ambiguous column name: movieId"
+     ]
+    }
+   ],
+   "source": [
+    "import sqlite3\n",
+    "from pprint import pprint\n",
+    "\n",
+    "db = sqlite3.connect('Movies/BDD/moviesdb.db')\n",
+    "\n",
+    "cursor = db.cursor()\n",
+    "\n",
+    "a = cursor.execute(\"SELECT * FROM movies LEFT JOIN links ON movieId = links.movieId\")\n",
     "\n",
     "result1 = a.fetchall()\n",
     "\n",
