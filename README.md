@@ -51,7 +51,7 @@ après ouverture du logiciel, cliquez sur "ouvrir une nouvelle base de donnée"
 
 --> ouvrez le fichier moviesdb.db dans le répertoire BDD
 
-![doc3](images/doctechinsta3)
+![doc3](images/doctechinsta3.png)
 
    - Grâce à l'onglet "Structure la Base de Données" vous avez un aperçu des différents tableaux qui constituent moviesdb.db
    - L'onglet "Parcourir les données" nous donne une vue direct sur les données de chaque tableaux.
