@@ -36,7 +36,7 @@ Ce logiciel nous permet d'intérroger les bases de données complexes via des re
 Pour installer ce logiciel, il suffit de cliquer sur le lien suivant et de sélectionner la version compatible avec son système d'exploitation (de prérence le lien contenant "Standart installer"):
 - https://sqlitebrowser.org/dl/
 
-![doc1](images/doctechinsta1)
+![doc1](images/doctechinsta1.png)
 Par exemple si vous êtes sous  windows (la version 64bits) 
 
 https://www.youtube.com/watch?v=CDen1TavGQ8 (tutorial)
@@ -47,7 +47,7 @@ Une fois le programme installé, il suffit de le lancer et de suivre les instruc
                c) utilisation
 après ouverture du logiciel, cliquez sur "ouvrir une nouvelle base de donnée"
 
-![doc2](images/doctechinsta2)
+![doc2](images/doctechinsta2.png)
 
 --> ouvrez le fichier moviesdb.db dans le répertoire BDD
 
@@ -57,7 +57,7 @@ après ouverture du logiciel, cliquez sur "ouvrir une nouvelle base de donnée"
    - L'onglet "Parcourir les données" nous donne une vue direct sur les données de chaque tableaux.
    - C'est dans l'onglet "exécutez sql" que nous allons pouvoir réaliser les requêtes sql pour intérroger les tableaux.
    
-![doc4](images/doctechinsta4)
+![doc4](images/doctechinsta4.png)
 
            2) Jupyter Lab
         
