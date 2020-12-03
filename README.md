@@ -97,8 +97,8 @@ Vous pouvez installer jupyterlab via la ligne de commande dans le terminal et le
  ![doc11](images_readme/doctechinsta11.png)
  
 Une fois le notebook lancé on peut commencer notre exploitation de données. 
-Voir le document Floupics.ipynb pour le script qui permet l’insertion de nos 4 bases dans moviesdb.db. 
-Voir le documents Queries_test.ipynb pour toutes les requêtes permettant notre analyse de la table moviesdb.db . 
+Voir le document Script.ipynb pour le script qui permet l’insertion de nos 4 bases dans moviesdb.db. 
+Voir le documents Finale_Queries.ipynb pour toutes les requêtes permettant notre analyse de la table moviesdb.db . 
 
 En cas de difficulté, vous pouvez contacter notre service clientèle à l’adresse suivante: contact@teambprod.com 
 
